@@ -4,12 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CSP | Android Phone Usage Study</title>
+<title>Android Phone Usage - CSP Project</title>
 
 <style>
-
-/* GENERAL SETTINGS */
 * {
     margin: 0;
     padding: 0;
@@ -17,435 +14,275 @@
     scroll-behavior: smooth;
 }
 
-:root {
-    --primary: #172554;
-    --secondary: #4338ca;
-    --accent: #06b6d4;
-    --light: #f4f7ff;
-    --white: #ffffff;
-    --text: #263247;
-}
-
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: var(--light);
-    color: var(--text);
+    font-family: Arial, sans-serif;
     line-height: 1.7;
+    background: #f5f7fb;
+    color: #263247;
 }
 
-/* COLLEGE HEADER */
-header {
-    background: linear-gradient(120deg, #172554, #4338ca, #0891b2);
-    color: white;
-    text-align: center;
-    padding: 45px 20px;
-}
-
-.college {
-    font-size: 27px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.tag {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 7px 20px;
-    border: 1px solid white;
-    border-radius: 30px;
-}
-
-header h2 {
-    margin-top: 20px;
-    font-size: 25px;
-}
-
-/* NAVIGATION */
+/* Navigation */
 nav {
-    background: #111c46;
+    background: #101d35;
+    padding: 17px 4%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5px;
-    padding: 13px;
+    gap: 23px;
     position: sticky;
     top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    z-index: 1000;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 9px 13px;
-    border-radius: 7px;
     font-size: 14px;
-    font-weight: 600;
-    transition: .3s;
+    font-weight: bold;
 }
 
 nav a:hover {
-    background: #06b6d4;
-    color: #111c46;
+    color: #58c4e8;
 }
 
-/* HOME HERO */
+/* Home */
 .hero {
-    min-height: 420px;
+    min-height: 450px;
+    background: linear-gradient(135deg, #102b50, #087eaa);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 60px 20px;
-    color: white;
-    background: linear-gradient(120deg, #172554, #4338ca, #0891b2);
-}
-
-.small-title {
-    color: #67e8f9;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
 }
 
 .hero h1 {
-    font-size: clamp(30px, 5vw, 48px);
-    max-width: 850px;
-    line-height: 1.2;
-    margin: 18px 0;
+    font-size: 38px;
+    margin-bottom: 18px;
 }
 
 .hero p {
-    max-width: 720px;
-    font-size: 18px;
-    color: #e0e7ff;
+    font-size: 19px;
+    max-width: 750px;
 }
 
-.hero-button {
+.hero .btn {
     display: inline-block;
+    background: white;
+    color: #075b8c;
+    padding: 12px 28px;
+    border-radius: 25px;
     margin-top: 25px;
-    padding: 13px 25px;
-    background: #06b6d4;
-    color: #082f49;
-    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    transition: .3s;
 }
 
-.hero-button:hover {
-    background: white;
-    transform: translateY(-3px);
-}
-
-/* COMMON SECTIONS */
+/* Common sections */
 section {
-    max-width: 1150px;
-    margin: 35px auto;
-    padding: 45px 25px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 5px 25px rgba(30,41,90,.07);
+    padding: 65px 8%;
 }
 
-.section-heading {
+.section-title {
     text-align: center;
-    margin-bottom: 30px;
-}
-
-.section-heading h2 {
     font-size: 30px;
-    color: var(--primary);
+    margin-bottom: 12px;
+    color: #172c4a;
 }
 
-.section-heading p {
-    color: #64748b;
-    margin-top: 7px;
-}
-
-.heading-line {
-    width: 75px;
+.underline {
+    width: 85px;
     height: 4px;
-    background: linear-gradient(90deg, #4338ca, #06b6d4);
-    margin: 12px auto;
+    background: #168bb5;
+    margin: 0 auto 30px;
     border-radius: 5px;
 }
 
-/* HORIZONTAL STUDENT PROFILES */
-.student-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.intro {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 30px;
+    color: #626e7e;
+}
+
+/* Team profiles */
+.team {
+    background: white;
 }
 
 .student-card {
     display: flex;
     align-items: center;
-    gap: 25px;
-    background: #f8faff;
-    padding: 20px;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    transition: .3s;
+    gap: 35px;
+    background: #fff;
+    border: 1px solid #dce5f0;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 22px auto;
+    max-width: 950px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    transition: 0.3s;
 }
 
 .student-card:hover {
-    transform: translateX(5px);
-    box-shadow: 0 8px 22px rgba(67,56,202,.15);
-    border-color: #818cf8;
+    transform: translateY(-4px);
+    box-shadow: 0 9px 25px rgba(0,0,0,0.10);
 }
 
 .student-card img {
-    width: 145px;
-    height: 145px;
-    flex-shrink: 0;
-    border-radius: 12px;
+    width: 190px;
+    height: 190px;
     object-fit: cover;
-    border: 4px solid #c7d2fe;
+    object-position: center;
+    border: 4px solid #dceafa;
+    border-radius: 15px;
+    flex-shrink: 0;
 }
 
-.student-details {
-    text-align: left;
-}
-
-.student-details h3 {
-    color: #172554;
-    font-size: 20px;
-    margin-bottom: 8px;
+.student-info h3 {
+    font-size: 23px;
+    color: #172c4a;
+    margin-bottom: 12px;
 }
 
 .roll {
     display: inline-block;
-    margin-top: 5px;
-    padding: 6px 13px;
-    background: #e0e7ff;
-    color: #3730a3;
+    background: #e9f1ff;
+    color: #24518d;
+    padding: 6px 15px;
     border-radius: 20px;
-    font-size: 14px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.student-role {
-    color: #64748b;
-    font-size: 14px;
-    margin-top: 8px;
+.student-info p {
+    color: #77818f;
 }
 
-/* ABOUT PROJECT */
-.about-content {
-    font-size: 16px;
-    text-align: justify;
-}
-
-.highlight {
-    background: #eef2ff;
-    border-left: 5px solid #4338ca;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-/* PROJECT OBJECTIVES */
-.info-grid {
+/* Content cards */
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    border-top: 4px solid #168bb5;
+}
+
+.card h3 {
+    color: #12648d;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #667085;
+}
+
+/* Survey */
+.survey {
+    background: white;
+}
+
+.info-list {
+    max-width: 850px;
+    margin: 20px auto;
+    padding-left: 25px;
+}
+
+.info-list li {
+    margin-bottom: 12px;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 18px;
 }
 
-.info-card {
-    background: linear-gradient(135deg, #eef2ff, #ecfeff);
-    padding: 22px;
-    border-radius: 12px;
-    border: 1px solid #e0e7ff;
-    transition: .3s;
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-}
-
-.info-card h3 {
-    color: #3730a3;
-    margin-bottom: 9px;
-}
-
-/* PROJECT ACTIVITIES */
-.activity-list {
-    list-style: none;
-}
-
-.activity-list li {
-    padding: 14px 18px;
-    background: #f8faff;
-    border-left: 4px solid #06b6d4;
-    margin-bottom: 13px;
-    border-radius: 7px;
-}
-
-/* PHOTO GALLERY */
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
-}
-
-.gallery-item {
-    overflow: hidden;
-    border-radius: 13px;
-    background: #f1f5f9;
-    box-shadow: 0 4px 14px rgba(0,0,0,.08);
-    transition: .3s;
-}
-
-.gallery-item:hover {
-    transform: translateY(-6px);
-}
-
-.gallery-item img {
+.gallery img {
     width: 100%;
     height: 210px;
     object-fit: cover;
-    display: block;
+    border-radius: 13px;
+    border: 3px solid white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.gallery-item h3 {
-    color: #172554;
-    text-align: center;
-    padding: 12px 10px 0;
+/* Outcomes */
+.highlight {
+    background: #e8f5fc;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 25px;
 }
 
-.gallery-item p {
-    text-align: center;
-    color: #64748b;
-    font-size: 14px;
-    padding: 0 12px 15px;
-}
-
-/* PROJECT OUTCOMES */
-.outcome {
-    background: linear-gradient(120deg, #172554, #4338ca);
-    color: white;
-}
-
-.outcome .section-heading h2,
-.outcome .section-heading p {
-    color: white;
-}
-
-.outcome p {
-    text-align: center;
-}
-
-/* CONCLUSION */
-.conclusion-text {
-    font-size: 16px;
-    text-align: justify;
-}
-
-/* CONTACT */
-.contact-box {
-    text-align: center;
-    padding: 25px;
-    background: #eef2ff;
-    border-radius: 12px;
-}
-
-.contact-box p {
-    margin: 9px;
-}
-
-/* FOOTER */
+/* Footer */
 footer {
-    background: #111c46;
+    background: #101d35;
     color: white;
     text-align: center;
-    padding: 28px 15px;
-    margin-top: 40px;
+    padding: 30px 15px;
 }
 
 footer p {
     margin: 5px;
 }
 
-.back-top {
-    display: inline-block;
-    margin-top: 12px;
-    color: #67e8f9;
-    text-decoration: none;
-}
-
-/* MOBILE RESPONSIVE */
-@media(max-width: 600px) {
-
-    .college {
-        font-size: 21px;
-    }
-
-    header h2 {
-        font-size: 20px;
+/* Responsive design */
+@media (max-width: 650px) {
+    nav {
+        gap: 12px;
+        padding: 15px 8px;
     }
 
     nav a {
         font-size: 12px;
-        padding: 8px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 16px;
     }
 
     section {
-        margin: 18px 10px;
-        padding: 28px 16px;
-    }
-
-    .section-heading h2 {
-        font-size: 24px;
-    }
-
-    .hero {
-        min-height: 350px;
+        padding: 45px 5%;
     }
 
     .student-card {
+        flex-direction: column;
+        text-align: center;
         gap: 15px;
-        padding: 13px;
     }
 
     .student-card img {
-        width: 105px;
-        height: 105px;
+        width: 180px;
+        height: 180px;
     }
 
-    .student-details h3 {
-        font-size: 15px;
-    }
-
-    .roll {
-        font-size: 12px;
-        padding: 5px 9px;
+    .student-info h3 {
+        font-size: 20px;
     }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- COLLEGE HEADER -->
-<header>
-    <div class="college">
-        SREE VENKATESWAEA COLLEGE OF ENGINEERING
-    </div>
-
-    <div class="tag">COMMUNITY SERVICE PROJECT</div>
-
-    <h2>Academic Project Presentation</h2>
-
-    <p>A Student Community Awareness Initiative</p>
-</header>
-
 <!-- NAVIGATION -->
 <nav>
     <a href="#home">Home</a>
-    <a href="#students">Our Team</a>
+    <a href="#team">Our Team</a>
     <a href="#about">About</a>
     <a href="#objectives">Objectives</a>
     <a href="#activities">Activities</a>
@@ -456,362 +293,412 @@ footer p {
 </nav>
 
 <!-- HOME -->
-<div class="hero" id="home">
-
-    <div class="small-title">
-        Our Community Service Project
-    </div>
-
-    <h1>
-        A Study on Android Phone Usage Among Different People
-    </h1>
-
+<header class="hero" id="home">
+    <h1>ANDROID PHONE USAGE</h1>
     <p>
-        Exploring smartphone usage patterns, understanding digital habits,
-        and promoting responsible Android phone usage in our community.
+        A Study on Android Phone Usage Among Different People
+    </p>
+    <p>
+        Community Service Project (CSP)
+    </p>
+    <a href="#about" class="btn">Explore Our Project</a>
+</header>
+
+<!-- TEAM MEMBERS -->
+<section class="team" id="team">
+
+    <h2 class="section-title">Meet Our Team</h2>
+    <div class="underline"></div>
+
+    <p class="intro">
+        Five students working together towards a common goal.
     </p>
 
-    <a href="#about" class="hero-button">
-        Explore Our Project
-    </a>
-
-</div>
-
-<!-- STUDENTS -->
-<section id="students">
-
-    <div class="section-heading">
-        <h2>Meet Our Team</h2>
-        <div class="heading-line"></div>
-        <p>Five students working together towards a common goal.</p>
+    <div class="student-card">
+        <img src="student1.jpg.png" alt="Shaik Badulla">
+        <div class="student-info">
+            <h3>SHAIK BADULLA</h3>
+            <span class="roll">Roll No: 24JNA33006</span>
+            <p>CSP Team Member</p>
+        </div>
     </div>
 
-    <div class="student-container">
-
-        <div class="student-card">
-            <img src="student1.jpg" alt="Shaik Badulla">
-
-            <div class="student-details">
-                <h3>SHAIK BADULLA</h3>
-                <div class="roll">Roll No: 24JNA33006</div>
-                <p class="student-role">CSP Team Member</p>
-            </div>
+    <div class="student-card">
+        <img src="student2.jpg.jpeg" alt="Chunduru Madhan Mohan">
+        <div class="student-info">
+            <h3>CHUNDURU MADHAN MOHAN</h3>
+            <span class="roll">Roll No: 24JNA33023</span>
+            <p>CSP Team Member</p>
         </div>
-
-        <div class="student-card">
-            <img src="student2.jpg" alt="Chunduru Madhan Mohan">
-
-            <div class="student-details">
-                <h3>CHUNDURU MADHAN MOHAN</h3>
-                <div class="roll">Roll No: 24JNA33023</div>
-                <p class="student-role">CSP Team Member</p>
-            </div>
-        </div>
-
-        <div class="student-card">
-            <img src="student3.jpg" alt="Shaik Juned Ahammad">
-
-            <div class="student-details">
-                <h3>SHAIK JUNED AHAMMAD</h3>
-                <div class="roll">Roll No: 24JNA33060</div>
-                <p class="student-role">CSP Team Member</p>
-            </div>
-        </div>
-
-        <div class="student-card">
-            <img src="student4.jpg" alt="Chebolu Hemanth">
-
-            <div class="student-details">
-                <h3>CHEBOLU HEMANTH</h3>
-                <div class="roll">Roll No: 24JNA33017</div>
-                <p class="student-role">CSP Team Member</p>
-            </div>
-        </div>
-
-        <div class="student-card">
-            <img src="student5.jpg" alt="Gandavarapu Mahesh">
-
-            <div class="student-details">
-                <h3>GANDAVARAPU MAHESH</h3>
-                <div class="roll">Roll No: 24JNA33036</div>
-                <p class="student-role">CSP Team Member</p>
-            </div>
-        </div>
-
     </div>
+
+    <div class="student-card">
+        <img src="student3.jpg.png" alt="Shaik Juned Ahammad">
+        <div class="student-info">
+            <h3>SHAIK JUNED AHAMMAD</h3>
+            <span class="roll">Roll No: UPDATE ROLL NUMBER</span>
+            <p>CSP Team Member</p>
+        </div>
+    </div>
+
+    <div class="student-card">
+        <img src="student4.jpg.jpeg" alt="Student 4">
+        <div class="student-info">
+            <h3>STUDENT 4 NAME</h3>
+            <span class="roll">Roll No: UPDATE ROLL NUMBER</span>
+            <p>CSP Team Member</p>
+        </div>
+    </div>
+
+    <div class="student-card">
+        <img src="student5.jpg.png" alt="Student 5">
+        <div class="student-info">
+            <h3>STUDENT 5 NAME</h3>
+            <span class="roll">Roll No: UPDATE ROLL NUMBER</span>
+            <p>CSP Team Member</p>
+        </div>
+    </div>
+
 </section>
 
-<!-- ABOUT PROJECT -->
+<!-- ABOUT -->
 <section id="about">
 
-    <div class="section-heading">
-        <h2>About Our Project</h2>
-        <div class="heading-line"></div>
-        <p>Understanding the role of Android smartphones in everyday life.</p>
-    </div>
+    <h2 class="section-title">About Our CSP Project</h2>
+    <div class="underline"></div>
 
-    <div class="about-content">
+    <p class="intro">
+        Our Community Service Project focuses on understanding
+        Android phone usage among different groups of people.
+        We study how people use smartphones in their daily lives,
+        including communication, education, business,
+        entertainment and digital services.
+    </p>
 
-        <p>
-            Android smartphones have become an important part of modern life.
-            People use smartphones for communication, education,
-            entertainment, online shopping, banking, social media and
-            accessing information.
-        </p>
+    <div class="cards">
 
-        <p style="margin-top:15px;">
-            Our Community Service Project focuses on studying Android phone
-            usage among different people in our community. Through surveys
-            and personal interactions, we collect information about their
-            smartphone habits, frequently used applications, benefits and
-            challenges.
-        </p>
+        <div class="card">
+            <h3>Project Title</h3>
+            <p>Android Phone Usage Among Different People.</p>
+        </div>
 
-        <div class="highlight">
-            <strong>Our Project Theme:</strong>
-            To understand how different people use Android smartphones
-            and encourage safe, useful and responsible digital practices.
+        <div class="card">
+            <h3>Project Type</h3>
+            <p>Community Service Project (CSP).</p>
+        </div>
+
+        <div class="card">
+            <h3>Project Focus</h3>
+            <p>Smartphone usage and its impact on society.</p>
+        </div>
+
+        <div class="card">
+            <h3>Target Groups</h3>
+            <p>Students, working people, elderly people and business people.</p>
         </div>
 
     </div>
 </section>
 
 <!-- OBJECTIVES -->
-<section id="objectives">
+<section id="objectives" style="background:white;">
 
-    <div class="section-heading">
-        <h2>Project Objectives</h2>
-        <div class="heading-line"></div>
-        <p>What we aim to understand through this project.</p>
-    </div>
+    <h2 class="section-title">Project Objectives</h2>
+    <div class="underline"></div>
 
-    <div class="info-grid">
+    <ul class="info-list">
+        <li>To understand Android phone usage among different people.</li>
+        <li>To identify the common purposes of smartphone usage.</li>
+        <li>To study the role of smartphones in education.</li>
+        <li>To understand the advantages and disadvantages of Android phones.</li>
+        <li>To create awareness about safe smartphone usage.</li>
+        <li>To understand the problems faced by different age groups.</li>
+        <li>To suggest healthy and responsible mobile phone usage habits.</li>
+    </ul>
 
-        <div class="info-card">
-            <h3>01. Usage Patterns</h3>
-            <p>Study how different people use Android smartphones daily.</p>
-        </div>
-
-        <div class="info-card">
-            <h3>02. Education</h3>
-            <p>Understand the use of smartphones for learning and education.</p>
-        </div>
-
-        <div class="info-card">
-            <h3>03. Communication</h3>
-            <p>Study how people communicate through mobile applications.</p>
-        </div>
-
-        <div class="info-card">
-            <h3>04. Applications</h3>
-            <p>Identify commonly used Android applications and services.</p>
-        </div>
-
-        <div class="info-card">
-            <h3>05. Digital Safety</h3>
-            <p>Understand awareness of privacy, passwords and online safety.</p>
-        </div>
-
-        <div class="info-card">
-            <h3>06. Awareness</h3>
-            <p>Promote balanced and responsible smartphone usage.</p>
-        </div>
-
-    </div>
 </section>
 
 <!-- ACTIVITIES -->
 <section id="activities">
 
-    <div class="section-heading">
-        <h2>Our Project Activities</h2>
-        <div class="heading-line"></div>
-        <p>Activities carried out during our community study.</p>
+    <h2 class="section-title">Project Activities</h2>
+    <div class="underline"></div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>1. Survey</h3>
+            <p>
+                We interact with different people to understand
+                their Android phone usage habits.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>2. Data Collection</h3>
+            <p>
+                We collect information about smartphone usage
+                through questions and discussions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>3. Observation</h3>
+            <p>
+                We observe how different people use Android
+                phones in their daily activities.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>4. Analysis</h3>
+            <p>
+                We study the collected information and
+                identify common usage patterns.
+            </p>
+        </div>
+
     </div>
-
-    <ul class="activity-list">
-
-        <li>
-            <strong>Survey Preparation:</strong>
-            Preparing questions about Android phone usage.
-        </li>
-
-        <li>
-            <strong>Community Interaction:</strong>
-            Communicating with different people.
-        </li>
-
-        <li>
-            <strong>Data Collection:</strong>
-            Collecting responses through surveys.
-        </li>
-
-        <li>
-            <strong>Data Organization:</strong>
-            Arranging the collected information.
-        </li>
-
-        <li>
-            <strong>Data Analysis:</strong>
-            Understanding common smartphone usage patterns.
-        </li>
-
-        <li>
-            <strong>Awareness:</strong>
-            Sharing information about responsible smartphone usage.
-        </li>
-
-        <li>
-            <strong>Documentation:</strong>
-            Preparing the final project report.
-        </li>
-
-    </ul>
 </section>
 
-<!-- PHOTO GALLERY -->
+<!-- SURVEY -->
+<section class="survey" id="survey">
+
+    <h2 class="section-title">Survey & Data Collection</h2>
+    <div class="underline"></div>
+
+    <p class="intro">
+        We conduct a survey among different groups of people
+        to understand their smartphone usage.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Students</h3>
+            <p>Online classes, educational apps, communication and entertainment.</p>
+        </div>
+
+        <div class="card">
+            <h3>Working People</h3>
+            <p>Office communication, emails, online meetings and daily tasks.</p>
+        </div>
+
+        <div class="card">
+            <h3>Elderly People</h3>
+            <p>Calling, video calls, messaging and accessing useful information.</p>
+        </div>
+
+        <div class="card">
+            <h3>Business People</h3>
+            <p>Digital payments, online business, marketing and customer communication.</p>
+        </div>
+
+    </div>
+
+    <h3 style="text-align:center; margin-top:35px;">
+        Sample Survey Questions
+    </h3>
+
+    <ul class="info-list">
+        <li>Which Android applications do you use regularly?</li>
+        <li>Do you use your smartphone for educational purposes?</li>
+        <li>Do you use online payment applications?</li>
+        <li>How does your smartphone help in daily life?</li>
+        <li>What problems do you face while using smartphones?</li>
+        <li>Are you aware of online safety and privacy?</li>
+    </ul>
+
+</section>
+
+<!-- USAGE ANALYSIS -->
+<section id="analysis">
+
+    <h2 class="section-title">Android Phone Usage Analysis</h2>
+    <div class="underline"></div>
+
+    <p class="intro">
+        Android smartphones are used for many purposes.
+        Our survey helps us understand the different ways
+        people use their mobile phones.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Education</h3>
+            <p>Learning, online classes, reading and educational videos.</p>
+        </div>
+
+        <div class="card">
+            <h3>Communication</h3>
+            <p>Phone calls, WhatsApp, messaging and video calls.</p>
+        </div>
+
+        <div class="card">
+            <h3>Entertainment</h3>
+            <p>Watching videos, listening to music and playing games.</p>
+        </div>
+
+        <div class="card">
+            <h3>Business</h3>
+            <p>Online shopping, digital payments and business applications.</p>
+        </div>
+
+    </div>
+
+    <div class="highlight">
+        <h3>Survey Results</h3>
+        <p>
+            Add your actual survey findings here after collecting
+            responses from the community. You can include the
+            number of people surveyed and charts showing their
+            smartphone usage patterns.
+        </p>
+    </div>
+
+</section>
+
+<!-- ADVANTAGES AND DISADVANTAGES -->
+<section style="background:white;" id="advantages">
+
+    <h2 class="section-title">Advantages & Disadvantages</h2>
+    <div class="underline"></div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Advantages</h3>
+            <ul>
+                <li>Easy communication.</li>
+                <li>Access to online education.</li>
+                <li>Digital payment facilities.</li>
+                <li>Quick access to information.</li>
+                <li>Useful for business activities.</li>
+                <li>Emergency communication.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Disadvantages</h3>
+            <ul>
+                <li>Distraction from studies.</li>
+                <li>Privacy and security risks.</li>
+                <li>Spread of false information.</li>
+                <li>Reduced face-to-face interaction.</li>
+                <li>Excessive screen time.</li>
+                <li>Online fraud and scams.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
 <section id="gallery">
 
-    <div class="section-heading">
-        <h2>Our Project Gallery</h2>
-        <div class="heading-line"></div>
-        <p>Memorable moments from our community service activities.</p>
+    <h2 class="section-title">Project Photo Gallery</h2>
+    <div class="underline"></div>
+
+    <p class="intro">
+        Some photographs of our CSP team members.
+        Add your actual project activity and survey photographs here.
+    </p>
+
+    <div class="gallery">
+        <img src="student1.jpg.png" alt="Shaik Badulla">
+        <img src="student2.jpg.jpeg" alt="Chunduru Madhan Mohan">
+        <img src="student3.jpg.png" alt="Shaik Juned">
+        <img src="student4.jpg.jpeg" alt="Student 4">
+        <img src="student5.jpg.png" alt="Student 5">
     </div>
 
-    <div class="gallery-container">
-
-        <div class="gallery-item">
-            <img src="project1.jpg" alt="Survey Collection">
-            <h3>Survey Collection</h3>
-            <p>Collecting information from different people.</p>
-        </div>
-
-        <div class="gallery-item">
-            <img src="project2.jpg" alt="Community Interaction">
-            <h3>Community Interaction</h3>
-            <p>Understanding smartphone usage habits.</p>
-        </div>
-
-        <div class="gallery-item">
-            <img src="project3.jpg" alt="Field Visit">
-            <h3>Field Visit</h3>
-            <p>Visiting people and conducting surveys.</p>
-        </div>
-
-        <div class="gallery-item">
-            <img src="project4.jpg" alt="Team Activities">
-            <h3>Team Activities</h3>
-            <p>Working together as a team.</p>
-        </div>
-
-        <div class="gallery-item">
-            <img src="project5.jpg" alt="Data Collection">
-            <h3>Data Collection</h3>
-            <p>Recording survey information.</p>
-        </div>
-
-        <div class="gallery-item">
-            <img src="project6.jpg" alt="Project Documentation">
-            <h3>Project Documentation</h3>
-            <p>Preparing our project documentation.</p>
-        </div>
-
-    </div>
 </section>
 
-<!-- PROJECT OUTCOMES -->
-<section id="outcomes" class="outcome">
+<!-- OUTCOMES -->
+<section id="outcomes" style="background:white;">
 
-    <div class="section-heading">
-        <h2>Project Outcomes</h2>
-        <div class="heading-line"></div>
-        <p>What we expect to learn from this study.</p>
+    <h2 class="section-title">Project Outcomes</h2>
+    <div class="underline"></div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Knowledge</h3>
+            <p>We understand how Android phones support everyday activities.</p>
+        </div>
+
+        <div class="card">
+            <h3>Awareness</h3>
+            <p>We learn about safe and responsible smartphone usage.</p>
+        </div>
+
+        <div class="card">
+            <h3>Communication</h3>
+            <p>We improve our interaction with different groups of people.</p>
+        </div>
+
+        <div class="card">
+            <h3>Social Understanding</h3>
+            <p>We understand the different needs of smartphone users.</p>
+        </div>
+
     </div>
-
-    <p>
-        Through this project, we aim to understand smartphone usage
-        patterns, learn about the benefits and challenges of Android
-        phones, improve our communication and survey skills, and
-        encourage people to use digital technology responsibly.
-    </p>
 
 </section>
 
 <!-- CONCLUSION -->
 <section id="conclusion">
 
-    <div class="section-heading">
-        <h2>Conclusion</h2>
-        <div class="heading-line"></div>
-    </div>
+    <h2 class="section-title">Conclusion</h2>
+    <div class="underline"></div>
 
-    <p class="conclusion-text">
-        Android smartphones play an important role in everyday life.
-        This Community Service Project helps us understand how different
-        people use smartphones for their daily activities. It also gives
-        us an opportunity to interact with the community, collect useful
-        information and promote responsible digital awareness.
+    <p class="intro">
+        Through this Community Service Project, we understand
+        that Android smartphones play an important role in
+        modern society. People use them for education,
+        communication, business, entertainment and many other
+        activities.
+
+        Smartphones provide many benefits, but users should
+        also be aware of privacy, security and excessive usage.
+        Our project helps us understand the importance of
+        responsible smartphone usage.
     </p>
+
+    <div class="highlight">
+        <h3 style="text-align:center;">THANK YOU!</h3>
+        <p style="text-align:center;">
+            We thank everyone who supported and participated
+            in our Community Service Project.
+        </p>
+    </div>
 
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" style="background:white;">
 
-    <div class="section-heading">
-        <h2>Project Information</h2>
-        <div class="heading-line"></div>
-    </div>
+    <h2 class="section-title">Contact</h2>
+    <div class="underline"></div>
 
-    <div class="contact-box">
+    <p class="intro">
+        Community Service Project (CSP)
+        <br>
+        Topic: Android Phone Usage Among Different People
+        <br>
+        Project Team: Five Students
+    </p>
 
-        <p>
-            <strong>College:</strong>
-            SREE VENKATESWAEA COLLEGE OF ENGINEERING
-        </p>
-
-        <p>
-            <strong>Project:</strong>
-            A Study on Android Phone Usage Among Different People
-        </p>
-
-        <p>
-            <strong>Project Type:</strong>
-            Community Service Project
-        </p>
-
-        <p>
-            <strong>Team Size:</strong> 5 Students
-        </p>
-
-        <p>
-            <strong>Academic Year:</strong> 2026
-        </p>
-
-    </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-
-    <h3>COMMUNITY SERVICE PROJECT</h3>
-
-    <p>
-        A Study on Android Phone Usage Among Different People
-    </p>
-
-    <p>
-        Designed and Developed by Our CSP Student Team
-    </p>
-
-    <a href="#home" class="back-top">
-        Back to Top ↑
-    </a>
-
-    <p style="margin-top:12px;">
-        © 2026 All Rights Reserved.
-    </p>
-
+    <h3>ANDROID PHONE USAGE - CSP PROJECT</h3>
+    <p>Designed by CSP Student Team</p>
+    <p>Learning | Serving | Understanding Society</p>
+    <p>&copy; 2026 CSP Project. All Rights Reserved.</p>
 </footer>
 
 </body>
