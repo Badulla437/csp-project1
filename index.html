@@ -8,6 +8,8 @@
 <title>CSP | Android Phone Usage Study</title>
 
 <style>
+
+/* GENERAL SETTINGS */
 * {
     margin: 0;
     padding: 0;
@@ -170,57 +172,63 @@ section {
     border-radius: 5px;
 }
 
-/* STUDENT PROFILES */
+/* HORIZONTAL STUDENT PROFILES */
 .student-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .student-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
     background: #f8faff;
-    text-align: center;
-    padding: 25px 15px;
+    padding: 20px;
     border: 1px solid #e2e8f0;
     border-radius: 16px;
     transition: .3s;
 }
 
 .student-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(67,56,202,.15);
+    transform: translateX(5px);
+    box-shadow: 0 8px 22px rgba(67,56,202,.15);
     border-color: #818cf8;
 }
 
 .student-card img {
-    width: 135px;
-    height: 135px;
-    border-radius: 50%;
+    width: 145px;
+    height: 145px;
+    flex-shrink: 0;
+    border-radius: 12px;
     object-fit: cover;
-    border: 5px solid #c7d2fe;
-    margin-bottom: 13px;
+    border: 4px solid #c7d2fe;
 }
 
-.student-card h3 {
+.student-details {
+    text-align: left;
+}
+
+.student-details h3 {
     color: #172554;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 20px;
+    margin-bottom: 8px;
 }
 
 .roll {
     display: inline-block;
-    margin-top: 9px;
+    margin-top: 5px;
     padding: 6px 13px;
     background: #e0e7ff;
     color: #3730a3;
     border-radius: 20px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .student-role {
     color: #64748b;
-    font-size: 13px;
+    font-size: 14px;
     margin-top: 8px;
 }
 
@@ -238,7 +246,7 @@ section {
     margin-top: 20px;
 }
 
-/* OBJECTIVES */
+/* PROJECT OBJECTIVES */
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -262,7 +270,7 @@ section {
     margin-bottom: 9px;
 }
 
-/* ACTIVITIES */
+/* PROJECT ACTIVITIES */
 .activity-list {
     list-style: none;
 }
@@ -329,6 +337,12 @@ section {
     text-align: center;
 }
 
+/* CONCLUSION */
+.conclusion-text {
+    font-size: 16px;
+    text-align: justify;
+}
+
 /* CONTACT */
 .contact-box {
     text-align: center;
@@ -363,6 +377,7 @@ footer p {
 
 /* MOBILE RESPONSIVE */
 @media(max-width: 600px) {
+
     .college {
         font-size: 21px;
     }
@@ -388,7 +403,27 @@ footer p {
     .hero {
         min-height: 350px;
     }
+
+    .student-card {
+        gap: 15px;
+        padding: 13px;
+    }
+
+    .student-card img {
+        width: 105px;
+        height: 105px;
+    }
+
+    .student-details h3 {
+        font-size: 15px;
+    }
+
+    .roll {
+        font-size: 12px;
+        padding: 5px 9px;
+    }
 }
+
 </style>
 </head>
 
@@ -416,21 +451,30 @@ footer p {
     <a href="#activities">Activities</a>
     <a href="#gallery">Gallery</a>
     <a href="#outcomes">Outcomes</a>
+    <a href="#conclusion">Conclusion</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <!-- HOME -->
 <div class="hero" id="home">
-    <div class="small-title">Our Community Service Project</div>
 
-    <h1>A Study on Android Phone Usage Among Different People</h1>
+    <div class="small-title">
+        Our Community Service Project
+    </div>
+
+    <h1>
+        A Study on Android Phone Usage Among Different People
+    </h1>
 
     <p>
         Exploring smartphone usage patterns, understanding digital habits,
         and promoting responsible Android phone usage in our community.
     </p>
 
-    <a href="#about" class="hero-button">Explore Our Project</a>
+    <a href="#about" class="hero-button">
+        Explore Our Project
+    </a>
+
 </div>
 
 <!-- STUDENTS -->
@@ -446,37 +490,52 @@ footer p {
 
         <div class="student-card">
             <img src="student1.jpg" alt="Shaik Badulla">
-            <h3>SHAIK BADULLA</h3>
-            <div class="roll">Roll No: 24JNA33006</div>
-            <p class="student-role">CSP Team Member</p>
+
+            <div class="student-details">
+                <h3>SHAIK BADULLA</h3>
+                <div class="roll">Roll No: 24JNA33006</div>
+                <p class="student-role">CSP Team Member</p>
+            </div>
         </div>
 
         <div class="student-card">
             <img src="student2.jpg" alt="Chunduru Madhan Mohan">
-            <h3>CHUNDURU MADHAN MOHAN</h3>
-            <div class="roll">Roll No: 24JNA33023</div>
-            <p class="student-role">CSP Team Member</p>
+
+            <div class="student-details">
+                <h3>CHUNDURU MADHAN MOHAN</h3>
+                <div class="roll">Roll No: 24JNA33023</div>
+                <p class="student-role">CSP Team Member</p>
+            </div>
         </div>
 
         <div class="student-card">
             <img src="student3.jpg" alt="Shaik Juned Ahammad">
-            <h3>SHAIK JUNED AHAMMAD</h3>
-            <div class="roll">Roll No: 24JNA33060</div>
-            <p class="student-role">CSP Team Member</p>
+
+            <div class="student-details">
+                <h3>SHAIK JUNED AHAMMAD</h3>
+                <div class="roll">Roll No: 24JNA33060</div>
+                <p class="student-role">CSP Team Member</p>
+            </div>
         </div>
 
         <div class="student-card">
             <img src="student4.jpg" alt="Chebolu Hemanth">
-            <h3>CHEBOLU HEMANTH</h3>
-            <div class="roll">Roll No: 24JNA33017</div>
-            <p class="student-role">CSP Team Member</p>
+
+            <div class="student-details">
+                <h3>CHEBOLU HEMANTH</h3>
+                <div class="roll">Roll No: 24JNA33017</div>
+                <p class="student-role">CSP Team Member</p>
+            </div>
         </div>
 
         <div class="student-card">
             <img src="student5.jpg" alt="Gandavarapu Mahesh">
-            <h3>GANDAVARAPU MAHESH</h3>
-            <div class="roll">Roll No: 24JNA33036</div>
-            <p class="student-role">CSP Team Member</p>
+
+            <div class="student-details">
+                <h3>GANDAVARAPU MAHESH</h3>
+                <div class="roll">Roll No: 24JNA33036</div>
+                <p class="student-role">CSP Team Member</p>
+            </div>
         </div>
 
     </div>
@@ -492,6 +551,7 @@ footer p {
     </div>
 
     <div class="about-content">
+
         <p>
             Android smartphones have become an important part of modern life.
             People use smartphones for communication, education,
@@ -512,6 +572,7 @@ footer p {
             To understand how different people use Android smartphones
             and encourage safe, useful and responsible digital practices.
         </div>
+
     </div>
 </section>
 
@@ -569,19 +630,42 @@ footer p {
     </div>
 
     <ul class="activity-list">
-        <li><strong>Survey Preparation:</strong> Preparing questions about Android phone usage.</li>
 
-        <li><strong>Community Interaction:</strong> Communicating with different people.</li>
+        <li>
+            <strong>Survey Preparation:</strong>
+            Preparing questions about Android phone usage.
+        </li>
 
-        <li><strong>Data Collection:</strong> Collecting responses through surveys.</li>
+        <li>
+            <strong>Community Interaction:</strong>
+            Communicating with different people.
+        </li>
 
-        <li><strong>Data Organization:</strong> Arranging the collected information.</li>
+        <li>
+            <strong>Data Collection:</strong>
+            Collecting responses through surveys.
+        </li>
 
-        <li><strong>Data Analysis:</strong> Understanding common smartphone usage patterns.</li>
+        <li>
+            <strong>Data Organization:</strong>
+            Arranging the collected information.
+        </li>
 
-        <li><strong>Awareness:</strong> Sharing information about responsible smartphone usage.</li>
+        <li>
+            <strong>Data Analysis:</strong>
+            Understanding common smartphone usage patterns.
+        </li>
 
-        <li><strong>Documentation:</strong> Preparing the final project report.</li>
+        <li>
+            <strong>Awareness:</strong>
+            Sharing information about responsible smartphone usage.
+        </li>
+
+        <li>
+            <strong>Documentation:</strong>
+            Preparing the final project report.
+        </li>
+
     </ul>
 </section>
 
@@ -661,7 +745,7 @@ footer p {
         <div class="heading-line"></div>
     </div>
 
-    <p class="about-content">
+    <p class="conclusion-text">
         Android smartphones play an important role in everyday life.
         This Community Service Project helps us understand how different
         people use smartphones for their daily activities. It also gives
@@ -680,30 +764,54 @@ footer p {
     </div>
 
     <div class="contact-box">
-        <p><strong>College:</strong> SREE VENKATESWAEA COLLEGE OF ENGINEERING</p>
 
-        <p><strong>Project:</strong> A Study on Android Phone Usage Among Different People</p>
+        <p>
+            <strong>College:</strong>
+            SREE VENKATESWAEA COLLEGE OF ENGINEERING
+        </p>
 
-        <p><strong>Project Type:</strong> Community Service Project</p>
+        <p>
+            <strong>Project:</strong>
+            A Study on Android Phone Usage Among Different People
+        </p>
 
-        <p><strong>Team Size:</strong> 5 Students</p>
+        <p>
+            <strong>Project Type:</strong>
+            Community Service Project
+        </p>
 
-        <p><strong>Academic Year:</strong> 2026</p>
+        <p>
+            <strong>Team Size:</strong> 5 Students
+        </p>
+
+        <p>
+            <strong>Academic Year:</strong> 2026
+        </p>
+
     </div>
-
 </section>
 
 <!-- FOOTER -->
 <footer>
+
     <h3>COMMUNITY SERVICE PROJECT</h3>
 
-    <p>A Study on Android Phone Usage Among Different People</p>
+    <p>
+        A Study on Android Phone Usage Among Different People
+    </p>
 
-    <p>Designed and Developed by Our CSP Student Team</p>
+    <p>
+        Designed and Developed by Our CSP Student Team
+    </p>
 
-    <a href="#home" class="back-top">Back to Top ↑</a>
+    <a href="#home" class="back-top">
+        Back to Top ↑
+    </a>
 
-    <p style="margin-top:12px;">© 2026 All Rights Reserved.</p>
+    <p style="margin-top:12px;">
+        © 2026 All Rights Reserved.
+    </p>
+
 </footer>
 
 </body>
